@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Tourist Buddy Design System - Travel-themed colors and gradients */
+
+@layer base {
+  :root {
+    /* Base Colors - Clean and Professional */
+    --background: 210 20% 98%;
+    --foreground: 215 25% 27%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 27%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Travel Brand Colors */
+    --primary: 205 100% 50%; /* Travel Blue */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 205 100% 45%;
+
+    --secondary: 142 71% 45%; /* Nature Green */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 55%;
+
+    --accent: 35 100% 60%; /* Warm Orange */
+    --accent-foreground: 0 0% 100%;
+
+    /* Guardian Buddy Monk Colors */
+    --monk-primary: 280 100% 70%; /* Purple */
+    --monk-secondary: 200 100% 70%; /* Cyan */
+    --monk-accent: 320 100% 75%; /* Pink */
+    --monk-background: 45 100% 85%; /* Light Yellow */
+
+    /* Safety Colors */
+    --safety-danger: 0 85% 60%;
+    --safety-warning: 35 95% 55%;
+    --safety-success: 142 71% 45%;
+    --safety-info: 205 100% 50%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 15% 88%;
+    --input: 215 15% 88%;
+    --ring: 205 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(205 100% 50%), hsl(142 71% 45%));
+    --gradient-monk: linear-gradient(135deg, hsl(280 100% 70%), hsl(200 100% 70%), hsl(320 100% 75%));
+    --gradient-safety: linear-gradient(135deg, hsl(0 85% 60%), hsl(35 95% 55%));
+    --gradient-travel: linear-gradient(135deg, hsl(205 100% 50%), hsl(35 100% 60%));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(215 25% 27% / 0.1);
+    --shadow-monk: 0 8px 30px hsl(280 100% 70% / 0.3);
+    --shadow-elevated: 0 10px 40px hsl(215 25% 27% / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bounce-gentle: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode - Travel Night Theme */
+    --background: 215 30% 12%;
+    --foreground: 210 20% 90%;
+
+    --card: 215 25% 15%;
+    --card-foreground: 210 20% 90%;
+
+    --popover: 215 25% 15%;
+    --popover-foreground: 210 20% 90%;
+
+    --primary: 205 100% 60%;
+    --primary-foreground: 215 30% 12%;
+    --primary-hover: 205 100% 55%;
+
+    --secondary: 142 60% 50%;
+    --secondary-foreground: 215 30% 12%;
+
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 35 90% 65%;
+    --accent-foreground: 215 30% 12%;
+
+    --monk-primary: 280 100% 75%;
+    --monk-secondary: 200 100% 75%;
+    --monk-accent: 320 100% 80%;
+    --monk-background: 45 80% 25%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 215 30% 12%;
+
+    --border: 215 20% 25%;
+    --input: 215 20% 25%;
+    --ring: 205 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Leaflet CSS Override */
+  .leaflet-popup-content-wrapper {
+    @apply rounded-xl shadow-lg border-0 bg-card text-card-foreground;
+  }
+
+  .leaflet-popup-tip {
+    @apply bg-card;
+  }
+}
+
+@layer components {
+  /* Guardian Buddy Monk Animation */
+  .monk-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+
+  /* Travel Card Hover Effects */
+  .travel-card {
+    @apply transition-all duration-300 hover:shadow-elevated hover:-translate-y-1;
+  }
+
+  /* Safety Button Pulse */
+  .safety-pulse {
+    animation: pulse-safety 2s infinite;
+  }
+
+  @keyframes pulse-safety {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 hsl(var(--safety-danger) / 0.7); }
+    50% { transform: scale(1.05); box-shadow: 0 0 0 10px hsl(var(--safety-danger) / 0); }
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-hero);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Ensure the AI monk stays above maps/dialogs */
+  .ai-monk-z {
+    z-index: 9999 !important;
+  }
+}
