@@ -1,73 +1,139 @@
-# Welcome to your Lovable project
+# 🌍 Tourist Buddy – Smart Travel Companion
 
-## Project info
+## 🚀 Overview
 
-**URL**: https://lovable.dev/projects/666db56d-d95f-40e3-a061-56283eee903f
+Tourist Buddy is a smart web-based platform designed to enhance the safety, convenience, and overall experience of tourists. It provides real-time assistance, location-based services, and secure verification features to ensure a seamless travel journey.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## ✨ Features
 
-**Use Lovable**
+* 🗺️ **Interactive Map** – Explore tourist locations with real-time navigation
+* 🔐 **Security Verification** – Ensures safe and verified services
+* 🤖 **AI Guardian Buddy** – Smart assistant for guidance and safety
+* 📱 **QR Code Scanner** – Quick access to secure information
+* 🧾 **Digital Tourist ID** – Secure identity for travelers
+* 📊 **Admin Dashboard** – Manage and monitor tourist activities
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/666db56d-d95f-40e3-a061-56283eee903f) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack
 
-**Use your preferred IDE**
+* **Frontend:** React (TypeScript), Vite
+* **Styling:** Tailwind CSS
+* **Routing:** React Router
+* **Deployment:** Vercel
+* **Tools:** Node.js, npm, Git, GitHub
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📁 Project Structure
 
-Follow these steps:
+```bash
+tourist-buddy-website/
+│
+├── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Application pages
+│   ├── hooks/           # Custom React hooks
+│   ├── lib/             # Utility & config files
+│
+├── public/              # Static assets
+├── package.json         # Dependencies & scripts
+├── vite.config.ts       # Vite configuration
+├── tailwind.config.ts   # Tailwind CSS setup
+```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ⚙️ Installation & Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 1️⃣ Clone the repository
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+git clone https://github.com/GudimallaSujana/Tourist_Buddy_SIH_2025.git
+cd Tourist_Buddy_SIH_2025/tourist-buddy-website
+```
+
+### 2️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Run the project
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+👉 Open in browser:
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+http://localhost:5173
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Live Demo
 
-## What technologies are used for this project?
+🔗 https://tourist-buddy-sih-2025.vercel.app
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔑 Key Modules
 
-## How can I deploy this project?
+### 📍 Map Module
 
-Simply open [Lovable](https://lovable.dev/projects/666db56d-d95f-40e3-a061-56283eee903f) and click on Share -> Publish.
+Displays tourist locations and navigation features.
 
-## Can I connect a custom domain to my Lovable project?
+### 🛡️ Safety Module
 
-Yes, you can!
+Provides safety alerts and emergency assistance.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 🔐 Verification Module
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Ensures secure access and trusted services.
+
+### 🤖 AI Assistant
+
+Guides users with smart recommendations.
+
+---
+
+## 📸 Screenshots
+
+*(Add screenshots of your UI here)*
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+To deploy:
+
+```bash
+npm run build
+```
+
+---
+
+## 👩‍💻 Author
+
+**Gudimalla Sujana**
+
+---
+
+## 📌 Future Enhancements
+
+* 🌐 Multi-language support
+* 📡 Real-time alerts & notifications
+* 🧠 Advanced AI recommendations
+* 📍 Offline map support
+
+---
+
+## 📜 License
+
+This project is for educational and development purposes.
